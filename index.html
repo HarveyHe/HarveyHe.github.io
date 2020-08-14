@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>my-project</title>
-<link href=/static/css/app.b7696156393ecb9aab822b0bf3b92bb4.css
-	rel=stylesheet>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
 </head>
 <body>
-	<div id=app>{{ message }}</div>
-	<script type=text/javascript
-		src=js/jquery.min.js></script>
-	<script type=text/javascript
-		src=js/vue.min.js></script>
-	
+	<nav>
+	    <a href="#/">EN</a>
+	    <a href="#/">中文</a>
+	  </nav>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'harvey & 文档',
+      repo: 'https://github.com/HarveyHe/HarveyHe.github.io.git',
+	  loadSidebar: true, //设置左边菜单
+	  loadNavbar: true, // 多文件文档侧边栏
+	  // coverpage: true // 设置封面
+  
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 </body>
-
-<script>
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
-</script>
 </html>
