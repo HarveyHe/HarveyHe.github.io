@@ -13,17 +13,49 @@
 	    <a href="#/">EN</a>
 	    <a href="#/">中文</a>
 	  </nav>
-  <div id="app"></div>
+  <div id="app">加载中</div>
   <script>
     window.$docsify = {
-      name: 'harvey & 文档',
+      name: '棠果 & 文档',
       repo: 'https://github.com/HarveyHe/HarveyHe.github.io.git',
 	  loadSidebar: true, //设置左边菜单
 	  loadNavbar: true, // 多文件文档侧边栏
 	  // coverpage: true // 设置封面
   
+  
+		// 完整配置参数
+		search: {
+		  maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+		  paths: [], // or 'auto'
+		  placeholder: 'Type to search',
+
+		  // 支持本地化
+		  placeholder: {
+			'/zh-cn/': '搜索',
+			'/': 'Type to search'
+		  },
+
+		  noData: 'No Results!',
+
+		  // 支持本地化
+		  noData: {
+			'/zh-cn/': '找不到结果',
+			'/': 'No Results'
+		  },
+
+		  // 搜索标题的最大层级, 1 - 6
+		  depth: 3,
+		},
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  
+  <!-- 全文搜索 - Search -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  
+  <!-- Vue -->
+  <script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/vuep/dist/vuep.min.js"></script>
+  
 </body>
 </html>
