@@ -7,6 +7,7 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 </head>
 <body>
 <!-- 	<nav>
@@ -58,5 +59,21 @@
   <script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/vuep/dist/vuep.min.js"></script>
   
+  
+  <!--插入“gitalk评论”模块-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '07a0902cd55da3b3ef2f',
+      clientSecret: 'c6a66b27c97e3903d9de203dfe25b030a8beea00',
+      repo: 'blog',
+      owner: 'HarveyHe',
+      admin: ['HarveyHe'],
+	  id:location.pathname,
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    })
+  </script>
 </body>
 </html>
