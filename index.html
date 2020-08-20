@@ -63,14 +63,19 @@
   <!--插入“gitalk评论”模块-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script src="//cdn.bootcdn.net/ajax/libs/blueimp-md5/2.17.0/js/md5.js"></script>
   <script>
+	window.title_id = window.location.hash.match(/#(.*?)([?]|$)/) ? window.location.hash.match(/#(.*?)([?]|$)/)[1] : '/';
+
     const gitalk = new Gitalk({
       clientID: '07a0902cd55da3b3ef2f',
       clientSecret: 'c6a66b27c97e3903d9de203dfe25b030a8beea00',
       repo: 'HarveyHe.github.io',
       owner: 'HarveyHe',
       admin: ['HarveyHe'],
-	  id:location.pathname,
+	  title: decodeURI(window.title_id),
+	  id: md5(window.location.hash),	// 页面的唯一标识，gitalk 会根据这个标识自动创建的issue的标签,我们使用页面的相对路径作为标识
+	  enableHotKey: true,	// 提交评论快捷键(cmd/ctrl + enter) 
       // facebook-like distraction free mode
       distractionFreeMode: false
     })
